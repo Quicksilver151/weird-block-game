@@ -1,4 +1,4 @@
-import pygame_sdl2 as pygame
+import pygame as pygame
 from classes import *
 pygame.init()
 winx, winy = 1080, 1920
