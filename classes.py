@@ -1,4 +1,4 @@
-import pygame_sdl2 as pygame
+import pygame as pygame
 
 class character(object):
 	def __init__(self, win, x, y, width, height, color):
@@ -78,7 +78,7 @@ class box(object):
 		self.rect = pygame.Rect(x, y, s, s)
 		self.health = health
 		self.inithealth = health
-		self.font = pygame.font.SysFont("DejaVuSans", self.s*0.2)
+		self.font = pygame.font.SysFont("DejaVuSans", 1) #self.s*0.2)
 	def redraw(self, win):
 		label = self.font.render(f"{self.health}/{self.inithealth}", 1, self.color)
 		win.blit(label, (self.rect.x+self.s*0.1, self.rect.y+self.s*1.05))
